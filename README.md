@@ -218,13 +218,3 @@ This project consists of two main components:
 ## API Documentation
 
 API documentation is available at http://localhost:3001/api/docs when the backend server is running.
-
-## Testing
-
-The project includes Postman collections for API testing, with different environments for various scenarios:
-- Development
-- Testing
-- Staging
-- Production
-
-Import the provided Postman collection and environment files to get started with API testing.
