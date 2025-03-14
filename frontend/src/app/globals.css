@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fix for Twitter logo positioning without breaking scrolling */
+body>svg:not([class]),
+body>img:not([class]) {
+  display: none !important;
+}
+
+/* Make sure container has full height */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Scrollable main content */
+main {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+}
+
+/* Sticky header styles */
+.sticky {
+  position: sticky;
+  z-index: 10;
+}
+
+/* Fix for Twitter icon alignment */
+.twitter-icon-fix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tweets container styling */
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual tweet card styles */
+.tweets-container>div {
+  border-bottom: 1px solid #2f3336;
+}
